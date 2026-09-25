@@ -107,7 +107,7 @@ export default function AllowanceHub({
             className="p-4 rounded-xl border border-[#EBE8E4] bg-[#FDFCFB] hover:bg-white hover:shadow-md transition-all duration-300 flex items-center justify-between"
           >
             <div>
-              <div className="flex items-center gap-1.5 text-[10px] font-mono text-[#8C8C8C] uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 text-xs font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase tracking-wider">
                 <Users className="w-3.5 h-3.5 text-[#8A9A5B]" />
                 <span>{kid}</span>
               </div>
@@ -144,7 +144,7 @@ export default function AllowanceHub({
             className="mb-8 p-5 rounded-xl border border-[#EBE8E4] bg-[#F7F5F2] grid grid-cols-1 md:grid-cols-2 gap-4"
           >
             <div className="md:col-span-2">
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Contribution Chore / Task</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Contribution Chore / Task</label>
               <input
                 type="text"
                 placeholder="e.g. Read 1 Invest book or complete coding lecture"
@@ -156,7 +156,7 @@ export default function AllowanceHub({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Assigned To</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Assigned To</label>
               <select
                 value={assignedTo}
                 onChange={(e) => setAssignedTo(e.target.value)}
@@ -169,7 +169,7 @@ export default function AllowanceHub({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Value ($)</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Value ($)</label>
               <input
                 type="number"
                 min="0.5"
@@ -181,7 +181,7 @@ export default function AllowanceHub({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Category</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Category</label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -204,7 +204,7 @@ export default function AllowanceHub({
               </button>
               <button
                 type="submit"
-                className="px-4 py-1.5 rounded-lg bg-[#8A9A5B] text-white font-medium hover:bg-[#7a8a4f] transition text-xs cursor-pointer"
+                className="px-4 py-1.5 rounded-lg bg-[#8A9A5B] text-white font-medium hover:bg-[#7a8a4f] transition text-base font-semibold min-h-[44px] cursor-pointer"
               >
                 Create Task
               </button>
@@ -216,7 +216,7 @@ export default function AllowanceHub({
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>
-            <tr className="border-b border-[#EBE8E4] text-[10px] font-mono text-[#8C8C8C] uppercase text-left">
+            <tr className="border-b border-[#EBE8E4] text-xs font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase text-left">
               <th className="pb-3 pl-2">Task Description</th>
               <th className="pb-3 pr-2 text-center">Assigned</th>
               <th className="pb-3 pr-2 text-center">Value</th>
@@ -256,7 +256,7 @@ export default function AllowanceHub({
                       <button
                         onClick={() => onToggleStatus(chore.id, 'completed')}
                         title="Mark Status Completed"
-                        className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] text-[10px] text-[#8C8C8C] font-mono transition cursor-pointer"
+                        className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] text-xs font-semibold tracking-wider text-[#8C8C8C] font-mono transition cursor-pointer"
                       >
                         <CheckSquare className="w-3.5 h-3.5" />
                         <span>Done</span>
@@ -267,7 +267,7 @@ export default function AllowanceHub({
                       <button
                         onClick={() => onToggleStatus(chore.id, 'approved')}
                         title="Parent Approval & Payout"
-                        className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-[#8A9A5B]/10 hover:bg-[#8A9A5B]/20 text-[#8A9A5B] border border-[#8A9A5B]/20 text-[10px] font-mono transition cursor-pointer"
+                        className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-[#8A9A5B]/10 hover:bg-[#8A9A5B]/20 text-[#8A9A5B] border border-[#8A9A5B]/20 text-xs font-semibold tracking-wider font-mono transition cursor-pointer"
                       >
                         <ShieldCheck className="w-3.5 h-3.5" />
                         <span>Approve</span>
@@ -275,7 +275,7 @@ export default function AllowanceHub({
                     )}
 
                     {chore.status === 'approved' && (
-                      <span className="text-[10px] font-mono text-[#8C8C8C] flex items-center gap-1 pr-1.5">
+                      <span className="text-xs font-semibold tracking-wider font-mono text-[#8C8C8C] flex items-center gap-1 pr-1.5">
                         <Receipt className="w-3 h-3 text-[#8C8C8C]" />
                         Settled
                       </span>
@@ -321,7 +321,7 @@ export default function AllowanceHub({
               </button>
             </div>
 
-            <p className="text-[10px] text-[#8C8C8C] leading-relaxed font-mono whitespace-pre-line h-24 overflow-y-auto bg-white p-2 rounded border border-[#EBE8E4]">
+            <p className="text-xs font-semibold tracking-wider text-[#8C8C8C] leading-relaxed font-mono whitespace-pre-line h-24 overflow-y-auto bg-white p-2 rounded border border-[#EBE8E4]">
               {notionRelationMapping}
             </p>
           </div>
@@ -342,14 +342,14 @@ export default function AllowanceHub({
             </div>
 
             <div className="space-y-1.5 mb-2.5">
-              <div className="flex justify-between text-[10px] font-mono border-b border-[#EBE8E4] pb-1">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono border-b border-[#EBE8E4] pb-1">
                 <span className="text-[#8C8C8C]">Rules</span>
                 <span className="text-right">Matches member & Approved status</span>
               </div>
             </div>
 
             <div className="p-2 bg-white border border-[#EBE8E4] rounded-lg">
-              <code className="text-[10px] font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
+              <code className="text-xs font-semibold tracking-wider font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
                 {sheetsRelationMapping}
               </code>
             </div>

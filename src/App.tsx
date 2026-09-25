@@ -140,11 +140,11 @@ export default function App() {
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16 border-b border-[#EBE8E4] pb-8">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="p-1 px-2 rounded bg-[#8A9A5B]/10 text-[#8A9A5B] text-[10px] font-mono font-semibold uppercase tracking-wider">
+              <span className="p-1 px-2 rounded bg-[#8A9A5B]/10 text-[#8A9A5B] text-xs font-semibold tracking-wider font-mono font-semibold uppercase tracking-wider">
                 Horizon Spec
               </span>
               <span className="h-4 w-px bg-[#EBE8E4]" />
-              <div className="flex items-center gap-1 text-[10px] font-mono text-[#8C8C8C]">
+              <div className="flex items-center gap-1 text-xs font-semibold tracking-wider font-mono text-[#8C8C8C]">
                 <Sparkles className="w-3.5 h-3.5 text-[#8A9A5B]" />
                 <span>Zen Minimalist Alignment</span>
               </div>
@@ -195,15 +195,15 @@ export default function App() {
             
             <div className="p-4 rounded-xl border border-[#EBE8E4] bg-[#F7F5F2] grid grid-cols-3 gap-3 font-mono text-center">
               <div className="p-2">
-                <span className="block text-[10px] text-[#8C8C8C] uppercase">Tracked Goals</span>
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] uppercase">Tracked Goals</span>
                 <span className="block text-base font-semibold text-[#1A1A1A] mt-1">{goals.length}</span>
               </div>
               <div className="p-2 border-x border-[#EBE8E4]">
-                <span className="block text-[10px] text-[#8C8C8C] uppercase">Ledger Tasks</span>
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] uppercase">Ledger Tasks</span>
                 <span className="block text-base font-semibold text-[#8A9A5B] mt-1">{chores.length}</span>
               </div>
               <div className="p-2">
-                <span className="block text-[10px] text-[#8C8C8C] uppercase">Active Kids</span>
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] uppercase">Active Kids</span>
                 <span className="block text-base font-semibold text-[#1A1A1A] mt-1">3</span>
               </div>
             </div>

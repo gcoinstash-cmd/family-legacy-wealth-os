@@ -146,7 +146,7 @@ export default function WealthBlueprint() {
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
         {/* Sliders Configuration */}
         <div className="xl:col-span-4 space-y-6 bg-[#F7F5F2] p-5 rounded-xl border border-[#EBE8E4]">
-          <h3 className="text-[10px] font-bold text-[#2D2D2D] tracking-wider uppercase font-mono">
+          <h3 className="text-xs font-semibold tracking-wider font-bold text-[#2D2D2D] tracking-wider uppercase font-mono">
             Blueprint Inputs
           </h3>
 
@@ -216,7 +216,7 @@ export default function WealthBlueprint() {
               onChange={(e) => setParams({ ...params, years: Number(e.target.value) })}
               className="w-full h-1 bg-[#EBE8E4] rounded-lg appearance-none cursor-pointer accent-[#8A9A5B]"
             />
-            <span className="block text-[10px] text-[#8C8C8C] mt-2 font-mono leading-relaxed">
+            <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] mt-2 font-mono leading-relaxed">
               Extended horizons capture the explosive curve of exponential compounding.
             </span>
           </div>
@@ -228,7 +228,7 @@ export default function WealthBlueprint() {
             {/* Top Stat Headers */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-center md:text-left">
               <div>
-                <span className="block text-[10px] text-[#8C8C8C] font-mono uppercase tracking-wider">
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] font-mono uppercase tracking-wider">
                   Contributions (Principal)
                 </span>
                 <span className="block text-md font-semibold text-[#2D2D2D] mt-1 font-mono">
@@ -236,7 +236,7 @@ export default function WealthBlueprint() {
                 </span>
               </div>
               <div className="border-y md:border-y-0 md:border-x border-[#EBE8E4] py-2 md:py-0 md:px-4">
-                <span className="block text-[10px] text-[#8C8C8C] font-mono uppercase tracking-wider">
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] font-mono uppercase tracking-wider">
                   Compounded Legacy Fund
                 </span>
                 <span className="block text-md font-bold text-[#8A9A5B] mt-1 font-mono">
@@ -244,7 +244,7 @@ export default function WealthBlueprint() {
                 </span>
               </div>
               <div>
-                <span className="block text-[10px] text-[#8C8C8C] font-mono uppercase tracking-wider">
+                <span className="block text-xs font-semibold tracking-wider text-[#8C8C8C] font-mono uppercase tracking-wider">
                   Growth Multiplier
                 </span>
                 <span className="block text-md font-semibold text-[#2D2D2D] mt-1">
@@ -383,7 +383,7 @@ export default function WealthBlueprint() {
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="absolute top-2 right-2 bg-white/95 border border-[#EBE8E4] px-3 py-2 rounded-lg text-[10px] font-mono shadow-md space-y-1 text-[#2D2D2D]"
+                className="absolute top-2 right-2 bg-white/95 border border-[#EBE8E4] px-3 py-2 rounded-lg text-xs font-semibold tracking-wider font-mono shadow-md space-y-1 text-[#2D2D2D]"
               >
                 <div className="font-semibold text-[#8A9A5B]">Year {hoveredData.year} Projections</div>
                 <div className="flex justify-between gap-4">
@@ -450,7 +450,7 @@ export default function WealthBlueprint() {
             </div>
 
             <div className="p-2 bg-white border border-[#EBE8E4] rounded-lg">
-              <code className="text-[10px] font-mono text-[#8A9A5B] break-all select-all block h-20 overflow-y-auto pr-1 leading-relaxed">
+              <code className="text-xs font-semibold tracking-wider font-mono text-[#8A9A5B] break-all select-all block h-20 overflow-y-auto pr-1 leading-relaxed">
                 {notionInterestFormula}
               </code>
             </div>
@@ -472,7 +472,7 @@ export default function WealthBlueprint() {
             </div>
 
             <div className="p-2 bg-white border border-[#EBE8E4] rounded-lg">
-              <code className="text-[10px] font-mono text-[#8A9A5B] break-all select-all block h-20 overflow-y-auto pr-1 leading-relaxed">
+              <code className="text-xs font-semibold tracking-wider font-mono text-[#8A9A5B] break-all select-all block h-20 overflow-y-auto pr-1 leading-relaxed">
                 {sheetsInterestFormula}
               </code>
             </div>

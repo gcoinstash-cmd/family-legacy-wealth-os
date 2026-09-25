@@ -96,7 +96,7 @@ export default function HorizonTracker({
             className="mb-8 p-5 rounded-xl border border-[#EBE8E4] bg-[#F7F5F2] grid grid-cols-1 md:grid-cols-2 gap-4"
           >
             <div className="md:col-span-2">
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Goal Name</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Goal Name</label>
               <input
                 type="text"
                 placeholder="e.g. Kids University Endowment or Family Land Hold"
@@ -108,7 +108,7 @@ export default function HorizonTracker({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Category</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Category</label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value as GoalCategory)}
@@ -122,7 +122,7 @@ export default function HorizonTracker({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Target Date</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Target Date</label>
               <input
                 type="month"
                 value={targetDate}
@@ -132,7 +132,7 @@ export default function HorizonTracker({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Target Amount ($)</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Target Amount ($)</label>
               <input
                 type="number"
                 min="1"
@@ -143,7 +143,7 @@ export default function HorizonTracker({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono text-[#8C8C8C] uppercase mb-1">Contribution ($)</label>
+              <label className="block text-sm font-semibold tracking-wider font-mono text-[#8C8C8C] uppercase mb-1">Contribution ($)</label>
               <input
                 type="number"
                 min="0"
@@ -163,7 +163,7 @@ export default function HorizonTracker({
               </button>
               <button
                 type="submit"
-                className="px-4 py-1.5 rounded-lg bg-[#8A9A5B] text-white font-medium hover:bg-[#7a8a4f] transition text-xs cursor-pointer"
+                className="px-4 py-1.5 rounded-lg bg-[#8A9A5B] text-white font-medium hover:bg-[#7a8a4f] transition text-base font-semibold min-h-[44px] cursor-pointer"
               >
                 Create Goal
               </button>
@@ -193,7 +193,7 @@ export default function HorizonTracker({
                         {goal.category.replace('_', ' ').toUpperCase()}
                       </span>
                     </div>
-                    <div className="flex items-center gap-3 mt-1 text-[11px] text-[#8C8C8C] font-mono">
+                    <div className="flex items-center gap-3 mt-1 text-xs font-semibold text-[#8C8C8C] font-mono">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5 text-[#8C8C8C]" />
                         Target: {goal.targetDate}
@@ -209,7 +209,7 @@ export default function HorizonTracker({
                     <div className="text-sm font-semibold text-[#1A1A1A]">
                       ${goal.currentAmount.toLocaleString()}
                     </div>
-                    <div className="text-[10px] text-[#8C8C8C] font-mono">
+                    <div className="text-xs font-semibold tracking-wider text-[#8C8C8C] font-mono">
                       Current Holding
                     </div>
                   </div>
@@ -219,14 +219,14 @@ export default function HorizonTracker({
                     <button
                       title="Contribute $1k"
                       onClick={() => onUpdateGoalCurrent(goal.id, 1000)}
-                      className="px-2 py-1 bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] rounded text-[10px] font-mono text-[#8C8C8C] transition cursor-pointer"
+                      className="px-2 py-1 bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] rounded text-xs font-semibold tracking-wider font-mono text-[#8C8C8C] transition cursor-pointer"
                     >
                       +$1K
                     </button>
                     <button
                       title="Contribute $5k"
                       onClick={() => onUpdateGoalCurrent(goal.id, 5000)}
-                      className="px-2 py-1 bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] rounded text-[10px] font-mono text-[#8C8C8C] transition cursor-pointer"
+                      className="px-2 py-1 bg-white hover:bg-[#8A9A5B]/10 hover:text-[#8A9A5B] border border-[#EBE8E4] rounded text-xs font-semibold tracking-wider font-mono text-[#8C8C8C] transition cursor-pointer"
                     >
                       +$5K
                     </button>
@@ -243,7 +243,7 @@ export default function HorizonTracker({
 
               {/* Progress Bar Visualizer */}
               <div className="relative pt-1">
-                <div className="flex mb-1.5 items-center justify-between text-[11px] font-mono">
+                <div className="flex mb-1.5 items-center justify-between text-xs font-semibold font-mono">
                   <span className="text-[#8C8C8C]">Progression</span>
                   <span className="text-[#8A9A5B] font-semibold">{percent}% Complete</span>
                 </div>
@@ -287,14 +287,14 @@ export default function HorizonTracker({
             </div>
             
             <div className="space-y-1.5 mb-2.5">
-              <div className="flex justify-between text-[10px] font-mono border-b border-[#EBE8E4] pb-1">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono border-b border-[#EBE8E4] pb-1">
                 <span className="text-[#8C8C8C]">Fields</span>
                 <span className="text-right">Name, Target, Current</span>
               </div>
             </div>
 
             <div className="p-2 bg-white border border-[#EBE8E4] rounded-lg">
-              <code className="text-[10px] font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
+              <code className="text-xs font-semibold tracking-wider font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
                 {notionProgressFormula}
               </code>
             </div>
@@ -316,14 +316,14 @@ export default function HorizonTracker({
             </div>
 
             <div className="space-y-1.5 mb-2.5">
-              <div className="flex justify-between text-[10px] font-mono border-b border-[#EBE8E4] pb-1">
+              <div className="flex justify-between text-xs font-semibold tracking-wider font-mono border-b border-[#EBE8E4] pb-1">
                 <span className="text-[#8C8C8C]">Usage</span>
                 <span className="text-right">A: Goal, C: Current, D: Target</span>
               </div>
             </div>
 
             <div className="p-2 bg-white border border-[#EBE8E4] rounded-lg">
-              <code className="text-[10px] font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
+              <code className="text-xs font-semibold tracking-wider font-mono text-[#8A9A5B] break-all select-all block h-10 overflow-y-auto pr-1">
                 {sheetsProgressFormula}
               </code>
             </div>

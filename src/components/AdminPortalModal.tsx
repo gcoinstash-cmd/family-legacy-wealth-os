@@ -53,7 +53,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
 
             <form onSubmit={handleVerify} className="space-y-4">
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-stone-400 mb-2">
+                <label className="block text-sm font-semibold font-mono uppercase tracking-wider text-stone-400 mb-2">
                   Family Master Key / Passkey
                 </label>
                 <div className="relative">
@@ -81,7 +81,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                 <button
                   type="button"
                   onClick={handleQuickFill}
-                  className="px-4 py-2.5 bg-stone-900 hover:bg-stone-800 border border-amber-500/30 text-amber-400 text-xs font-mono rounded-xl transition-all"
+                  className="px-5 py-3 min-h-[44px].5 bg-stone-900 hover:bg-stone-800 border border-amber-500/30 text-amber-400 text-base font-semibold min-h-[44px] font-mono rounded-xl transition-all"
                 >
                   ⚡ Auto-Fill Demo Passkey
                 </button>

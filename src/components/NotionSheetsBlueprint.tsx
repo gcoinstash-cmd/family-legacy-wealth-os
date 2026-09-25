@@ -135,7 +135,7 @@ export default function NotionSheetsBlueprint() {
                             {col.type}
                           </span>
                         </td>
-                        <td className="py-2.5 text-[#2D2D2D] font-mono text-[10px] leading-relaxed break-all max-w-sm sm:max-w-md">
+                        <td className="py-2.5 text-[#2D2D2D] font-mono text-xs font-semibold tracking-wider leading-relaxed break-all max-w-sm sm:max-w-md">
                           {col.detail}
                           {col.type === "Formula" && (
                             <button
@@ -190,7 +190,7 @@ export default function NotionSheetsBlueprint() {
                 <div className="text-[9px] uppercase font-mono text-[#8C8C8C] mb-1.5">Column Layout Order</div>
                 <div className="flex flex-wrap gap-2">
                   {sheet.headers.map((h, hIdx) => (
-                    <span key={hIdx} className="px-2.5 py-1 rounded-lg bg-[#F7F5F2] border border-[#EBE8E4] text-[10px] font-mono text-[#8A9A5B]">
+                    <span key={hIdx} className="px-2.5 py-1 rounded-lg bg-[#F7F5F2] border border-[#EBE8E4] text-xs font-semibold tracking-wider font-mono text-[#8A9A5B]">
                       {h}
                     </span>
                   ))}
@@ -263,7 +263,7 @@ export default function NotionSheetsBlueprint() {
                   </div>
                 )}
 
-                <p className="text-[10px] italic text-[#8C8C8C] pl-1 font-mono leading-relaxed mt-2 select-none">
+                <p className="text-xs font-semibold tracking-wider italic text-[#8C8C8C] pl-1 font-mono leading-relaxed mt-2 select-none">
                   💡 {sheet.explain}
                 </p>
               </div>
