@@ -83,7 +83,7 @@ export default function App() {
   const [goals, setGoals] = useState<HorizonGoal[]>(initialGoals);
   const [chores, setChores] = useState<AllowanceChore[]>(initialChores);
   const [isAdminOpen, setIsAdminOpen] = useState(
-    window.location.pathname === '/admin' || window.location.hash.includes('admin')
+    (window.location.pathname.includes('admin') || window.location.hash.includes('admin')) || window.location.hash.includes('admin')
   );
 
   // Goal State Updaters
